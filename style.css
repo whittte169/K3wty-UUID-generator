@@ -3,24 +3,26 @@ body {
     padding: 0;
     min-height: 100vh;
     text-align: center;
-    font-family: "Arial", sans-serif;
-    background: linear-gradient(135deg, #1e272e, #808080, #f5f5f5);
-    background-size: 400% 400%;
-    animation: bodyGradient 15s ease infinite;
-}
-@keyframes bodyGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    background-color: #000000;
 }
 .space {
     height: 70px;
+}
+.main-container {
+    height: 800px;
+    width: 650px;
+    border: solid  rgba(153, 50, 204, 1);
+    border-radius: 8px;
+    background-color: #121212;
+    background-size: 300% 300%;
+    margin: 20px auto;
+    box-shadow: 0px 15px 80px 0px rgba(138, 43, 226, 0.6);
+}
+.title {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 50px;
+    color: #808080;
+    cursor: default;
 }
 .generate {
     height: 80px;
@@ -29,31 +31,22 @@ body {
     border-radius: 8px;
     text-align: center;
     font-size: 35px;
-    font-family: "Arial", sans-serif;
-    background: linear-gradient(to bottom right, #1E90FF, #0000FF, #0000CD);
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #C0C0C0;
     background-size: 300% 300%;
     margin: 20px auto;
-    box-shadow: 0px 8px 20px 0px rgba(0, 191, 255, 1);
-    animation: generateGradient 15s ease infinite;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 8px 20px 0px rgba(138, 43, 226, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 .generate:hover {
+    cursor: pointer;
     transform: translateY(-8px);
-    box-shadow: 0px 15px 25px 0px rgba(0, 191, 255, 1);
+    box-shadow: 0px 15px 25px 0px rgba(138, 43, 226, 0.6);
+    background-color: #000000;
+    color: #D3D3D3;
 }
 .generate:active {
     transform: translateY(-2px);
-}
-@keyframes generateGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
 .uuid-container {
     width: 400px;
@@ -61,15 +54,15 @@ body {
     margin: 20px auto;
     padding: 0 20px;
     padding-left: 55px;
-    font-family: "Arial", sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-size: 15px;
     white-space: nowrap;
     border: none;
     border-radius: 8px;
     color: #000000;
-    background-color: #ffffff;
+    background-color: #C0C0C0;
     line-height: 80px;
-    box-shadow: 0px 8px 20px 0px rgba(105, 105, 105, 1);
+    box-shadow: 0px 8px 20px 0px rgba(138, 43, 226, 0.6);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -81,21 +74,13 @@ body {
     width: 30px;
     height: 30px;
     object-fit: contain;
-    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.2s;
 }
 .copy:hover {
     transform: scale(1.1);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .copy.clicked {
     transform: scale(0.8);
-    transition: transform 0.1s ease;
-}
-#bg-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
+    transition: transform 0.05s ease;
 }
