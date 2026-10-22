@@ -1,3 +1,7 @@
+const githubBtn = document.getElementById('github-container');
+githubBtn.addEventListener("click", () => {
+  window.open("https://github.com/whittte169/K3wty-UUID-generator", "_blank");
+});
 const generateUUID = () => {
   return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (c) => {
     const r = Math.random() * 16 | 0;
